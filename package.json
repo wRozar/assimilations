@@ -1,0 +1,21 @@
+{
+  "name": "asrpg-dices",
+  "version": "1.0.0",
+  "description": "A site with the custom dices for the rpg system: Assimilação RPG.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "RPG",
+    "ASSIMILAÇÃO",
+    "RPG",
+    "Dices",
+    "rpg",
+    "dice",
+    "rpg",
+    "trpg"
+  ],
+  "author": "Isaac Andrade.",
+  "license": "ISC"
+}

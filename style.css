@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+body {
+    gap: 12px;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--bs-body-bg);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 2rem; /* Tamanho padrão para o título */
+    margin: 0;
+}
+
+.container {
+    margin-top: 2rem;
+    padding: 0 1rem; /* Padding relativo */
+    flex: 1;
+}
+
+.pad {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Espaçamento relativo */
+    margin-bottom: 1rem;
+}
+
+.dicesBtn {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.display {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha */
+    justify-content: center;
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    gap: 1rem; /* Espaçamento entre os elementos */
+    max-width: 100%; /* Garante que o conteúdo não ultrapasse a largura da tela */
+    padding: 1rem; /* Adiciona um padding para evitar que o conteúdo encoste nas bordas */
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 1rem;
+}
+
+.text h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.pad img {
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 2.5rem; /* Tamanho relativo */
+    filter: brightness(50%);
+}
+
+.pad .config {
+    background: none;
+    border: none;
+}
+
+.config {
+    margin-bottom: 10px;
+}
+
+.config:hover {
+    transform: scale(1.1);
+}
+
+.pad-display {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #fff;
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: center;
+    border: solid black 2px;
+    z-index: 2;
+}
+
+.pad-display input {
+    width: 3rem;
+    text-align: center;
+    margin: 0.2rem;
+}
+
+.pad-display button {
+    margin-top: 0.2rem;
+    padding: 0.5rem;
+    width: 4rem;
+    height: 2.1rem;
+}
+
+.pad-display #pad-title {
+    margin-top: 1.5rem;
+    height: 0.5rem;
+}
+
+.body-display {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+}
+
+#close-display {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    color: #ff4444;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+
+#close-display:hover {
+    color: #cc0000;
+    transform: scale(0.95);
+}
+
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+}
+
+hr {
+    opacity: 1;
+    border: 2;
+}
+
+#cache {
+    position: relative;
+    color: rgb(63, 63, 63);
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.15rem;
+    margin-left: 0;
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    max-width: 100%; /* Garante que o conteúdo não ultrapasse a largura da tela */
+    padding: 0 1rem; /* Adiciona um padding para evitar que o conteúdo encoste nas bordas */
+    box-sizing: border-box; /* Garante que o padding seja incluído na largura total */
+}
+
+#cache #dice-img {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+#cache p {
+    color: #fff;
+}
+
+#dice-img img {
+    width: 2rem;
+    height: 2rem;
+}
+
+#dice-img #joaninha {
+    width: 2.2rem;
+}
+
+#cache b {
+    margin-left: 0.5rem;
+}
+
+#limpar {
+    width: 6rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#limpar:hover {
+    border-color: rgb(248, 99, 99);
+}
+
+#img-d6, #img-d10, #img-d12 {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    filter: contrast(175%) brightness(3%);
+    width: 6rem;
+}
+
+#img-d6:hover, #img-d10:hover, #img-d12:hover {
+    transform: scale(1.05);
+}
+
+#cervo, #joaninha, #coruja, #nada {
+    display: flex;
+    justify-content: center;
+    animation: shake 0.5s;
+    width: 6rem;
+    height: 6rem;
+    border: solid 2px black;
+}
+
+#joaninha {
+    width: 7rem;
+}
+
+/* Animation */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Responsividade */
+@media (max-width: 399px) {
+    
+    #title {
+        font-size: 1.5rem;
+    }
+
+    #img-d6, #img-d10, #img-d12 {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    #limpar {
+        width: 5rem;
+    }
+
+    .display {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #cervo, #joaninha, #coruja, #nada {
+        width: 5rem;
+        height: 5rem;
+    }
+    #cache {
+        margin-top: -3rem;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 767px) {
+    #title {
+        font-size: 1.75rem;
+    }
+
+    #img-d6, #img-d10, #img-d12 {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    #limpar {
+        width: 6rem;
+    }
+
+    #cervo, #joaninha, #coruja, #nada {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #title {
+        font-size: 2rem;
+    }
+
+    #img-d6, #img-d10, #img-d12 {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    #limpar {
+        width: 7rem;
+    }
+
+    #cervo, #joaninha, #coruja, #nada {
+        width: 7rem;
+        height: 7rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    #title {
+        font-size: 2.5rem;
+    }
+
+    #img-d6, #img-d10, #img-d12 {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    #limpar {
+        width: 8rem;
+    }
+
+    #cervo, #joaninha, #coruja, #nada {
+        width: 8rem;
+        height: 8rem;
+    }
+}
